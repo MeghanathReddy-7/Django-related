@@ -1,0 +1,23 @@
+<html>
+<body background="yellow">
+        <h1>Student details</h1>
+            {% if stlist %}
+            <table border="2 solid black">
+                <thead>
+                    <th>roll</th>
+                    <th>name</th>
+                    <th>marks</th>
+                </thead>
+                {% for s in stlist %}
+                    <tr>
+                        <td>{{s.roll}}</td>
+                        <td>{{s.name}}</td>
+                        <td>{{s.marks}}</td>
+                    </tr>
+                {% endfor %}
+             </table>
+            {% else %}
+                <p>no data</p>
+            {% endif %}
+    </body>
+</html>
